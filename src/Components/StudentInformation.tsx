@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-// @ts-expect-error The stylesheet is resolved by the bundler at runtime.
+
 import "./StudentInformation.css";
 import CourseManager, { type Course } from "./CourseManager";
 
