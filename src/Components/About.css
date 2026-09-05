@@ -1,0 +1,207 @@
+.about-page {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================= Keyframes ================= */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= Header ================= */
+.about-header {
+    background: linear-gradient(135deg, #193b80, #112b60);
+    color: white;
+    text-align: center;
+    padding: 50px 20px 70px;
+    animation: fadeInDown 0.6s ease-out forwards;
+}
+
+.about-header h1 {
+    margin: 0 0 10px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.about-header p {
+    max-width: 650px;
+    margin: auto;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #e5e7eb;
+}
+
+/* ================= Container & Layout ================= */
+.about-container {
+    width: 88%;
+    max-width: 1100px;
+    margin: -35px auto 50px;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+/* ================= Stat Boxes ================= */
+.stat-box {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    /* Entrance Animation */
+    animation: fadeInUp 0.6s ease-out both;
+    /* Hover Transitions */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Stagger Stat Boxes load animation */
+.about-stats .stat-box:nth-child(1) { animation-delay: 0.1s; }
+.about-stats .stat-box:nth-child(2) { animation-delay: 0.2s; }
+.about-stats .stat-box:nth-child(3) { animation-delay: 0.3s; }
+.about-stats .stat-box:nth-child(4) { animation-delay: 0.4s; }
+
+/* Stat Box Hover Effect */
+.stat-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.stat-box h2 {
+    margin: 0 0 4px;
+    font-size: 26px;
+    color: #193b80;
+    transition: transform 0.3s ease;
+}
+
+.stat-box:hover h2 {
+    transform: scale(1.1);
+}
+
+.stat-box p {
+    margin: 0;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* ================= Cards (Mission & Vision) ================= */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.about-card {
+    background: white;
+    border-radius: 8px;
+    padding: 26px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    /* Entrance Animation */
+    animation: fadeInUp 0.6s ease-out 0.45s both;
+    /* Hover Transitions */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+.about-card h3 {
+    color: #193b80;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.about-card p {
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: #4b5563;
+    margin: 0;
+}
+
+/* ================= Features Card ================= */
+.about-features {
+    background: white;
+    border-radius: 8px;
+    padding: 26px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* Entrance Animation */
+    animation: fadeInUp 0.6s ease-out 0.55s both;
+    /* Hover Transitions */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-features:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.about-features h3 {
+    color: #193b80;
+    margin-bottom: 16px;
+    font-size: 17px;
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-list li {
+    font-size: 13px;
+    color: #374151;
+    padding-left: 22px;
+    position: relative;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.feature-list li:hover {
+    transform: translateX(4px);
+    color: #193b80;
+}
+
+.feature-list li::before {
+    content: "✔";
+    color: #2864e8;
+    position: absolute;
+    left: 0;
+    transition: transform 0.2s ease;
+}
+
+.feature-list li:hover::before {
+    transform: scale(1.2);
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+    .about-stats { grid-template-columns: repeat(2, 1fr); }
+    .about-grid { grid-template-columns: 1fr; }
+    .feature-list { grid-template-columns: 1fr; }
+}

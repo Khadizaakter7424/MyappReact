@@ -1,0 +1,100 @@
+.student-page {
+    max-width: 1300px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: 30px 40px;
+}
+
+.student-page h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.student-page h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.student-form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 30px;
+}
+
+.student-form label {
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+}
+
+.student-form input,
+.student-form select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.student-form .checkbox-label {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.course-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.student-form button {
+    margin-top: 16px;
+    width: fit-content;
+    padding: 8px 20px;
+    background: #2f5fdb;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.student-form .cancel-btn {
+    background: #6c757d;
+    margin-left: 10px;
+}
+
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.student-table th,
+.student-table td {
+     text-align: left;
+    padding: 10px 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.edit-btn,
+.delete-btn {
+    border: none;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+.edit-btn {
+    background: #2f5fdb;
+}
+
+.delete-btn {
+    background: #dc3545;
+}

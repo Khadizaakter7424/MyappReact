@@ -1,0 +1,216 @@
+.props-page {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    background-color: #f8fafc;
+}
+
+/* ================= Keyframes ================= */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header */
+.props-header {
+    background: linear-gradient(135deg, #193b80, #112b60);
+    color: white;
+    text-align: center;
+    padding: 50px 20px 70px;
+    animation: fadeInDown 0.6s ease-out forwards;
+}
+
+.props-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.props-header p {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #e5e7eb;
+    line-height: 1.6;
+}
+
+/* Layout */
+.props-container {
+    width: 88%;
+    max-width: 1100px;
+    margin: -35px auto 50px;
+}
+
+/* Controls Card */
+.controls-card {
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+    animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.controls-card h3 {
+    margin: 0 0 18px;
+    color: #193b80;
+    font-size: 18px;
+}
+
+.controls-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    align-items: center;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.control-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #4b5563;
+}
+
+.control-group input {
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.control-group input:focus {
+    border-color: #2864e8;
+}
+
+.toggle-btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.toggle-btn:hover {
+    transform: translateY(-2px);
+}
+
+.toggle-btn.logged-in {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.toggle-btn.logged-out {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* Grid Layout */
+.demo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.demo-card {
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.demo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.demo-card.full-width {
+    grid-column: span 2;
+}
+
+.card-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: #f1f5f9;
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+/* Add Trainee Form */
+.add-trainee-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.add-trainee-form input {
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.add-trainee-form button {
+    background: #193b80;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.add-trainee-form button:hover {
+    background: #2864e8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .controls-grid {
+        grid-template-columns: 1fr;
+    }
+    .demo-grid {
+        grid-template-columns: 1fr;
+    }
+    .demo-card.full-width {
+        grid-column: span 1;
+    }
+    .add-trainee-form {
+        flex-direction: column;
+    }
+}
